@@ -27,18 +27,18 @@ def generate_circuit_json() -> None:
 
 
 def load_circuit_input(file_path: str) -> None:
-    circ = Tk2Circuit.from_package_json(json)
-    circ = lower_to_pytket(circ)
-    circ.to_tket1().get_commands()
     with open(file_path, "r") as fp:
         circ_json = json.load(fp)
-    circ = Tk2Circuit.from_package_json(circ_json)
-    circ = lower_to_pytket(circ)
-    print(circ.to_tket1().get_commands())
+
+    c = Circuit.from_dict(circ_json)
+    # circ = Tk2Circuit.from_package_json(circ_json)
+    # circ = lower_to_pytket(circ)
+    # print(circ.to_tket1().get_commands())
+    print(c.get_commands())
 
 
 def main():
-    generate_circuit_json()
+    load_circuit_input("../test_files/goto.json")
 
 
 if __name__ == "__main__":
