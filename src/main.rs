@@ -3,6 +3,8 @@ use tket2::{
     hugr::{hugr::views::SiblingSubgraph, ops::NamedOp, HugrView, Node},
 };
 
+use std::fs::File;
+
 fn subgraph_from_source_node(circuit: &tket2::Circuit, source_node: Node) -> SiblingSubgraph {
     // Traverse the Circuit with BFS to find the subcircuit
     // in the causal cone of the source node
@@ -39,8 +41,12 @@ fn main() {
 
     let sibgraph = subgraph_from_source_node(&circ, first_pauli.node());
 
-    let extracted = sibgraph.extract_subgraph(circ.hugr(), " ");
+    let extracted = sibgraph.extract_subgraph(circ.hugr(), "");
 
     let subcircuit = tket2::Circuit::try_new(&extracted, extracted.root()).unwrap();
     println!("{:?}", subcircuit.mermaid_string());
+
+    let file = File::create("test_files/tket2_json/subcircuit.json").unwrap();
+
+    let _ = subcircuit.to_package_writer(file);
 }
