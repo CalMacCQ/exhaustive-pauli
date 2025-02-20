@@ -26,7 +26,7 @@ fn subgraph_from_source_node(circuit: &tket2::Circuit, source_node: Node) -> Sib
 
 fn main() {
     let circ: tket2::Circuit =
-        tket2::serialize::load_tk1_json_file("./test_files/goto.json").unwrap();
+        tket2::serialize::load_tk1_json_file("./test_files/tket1_json/goto.json").unwrap();
 
     println!("{}", circ.mermaid_string());
 
@@ -39,8 +39,8 @@ fn main() {
 
     let sibgraph = subgraph_from_source_node(&circ, first_pauli.node());
 
-    let extracted = sibgraph.extract_subgraph(circ.hugr(), "my_HUGR_subgraph");
+    let extracted = sibgraph.extract_subgraph(circ.hugr(), " ");
 
     let subcircuit = tket2::Circuit::try_new(&extracted, extracted.root()).unwrap();
-    println!("{:?}", subcircuit);
+    println!("{:?}", subcircuit.mermaid_string());
 }

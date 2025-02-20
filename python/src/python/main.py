@@ -1,10 +1,12 @@
 import json
 from pytket import Circuit
+from pytket.circuit.display import view_browser as draw
+
 from tket2.circuit import Tk2Circuit
 from tket2.passes import lower_to_pytket
 
 
-def generate_circuit_json() -> None:
+def build_goto_circuit() -> Circuit:
     goto = Circuit()
     data_reg = goto.add_q_register("q", 7)
     ancilla = goto.add_q_register("z", 1)
@@ -21,9 +23,12 @@ def generate_circuit_json() -> None:
     goto.CX(data_reg[0], ancilla[0])
     goto.CX(data_reg[5], ancilla[0])
     goto.CX(data_reg[6], ancilla[0])
+    return goto
 
+
+def generate_circuit_json(circ: Circuit) -> None:
     with open("./test_files/goto.json", "w") as fp:
-        json.dump(goto.to_dict(), fp)
+        json.dump(circ.to_dict(), fp)
 
 
 def load_circuit_input(file_path: str) -> None:
@@ -38,7 +43,8 @@ def load_circuit_input(file_path: str) -> None:
 
 
 def main():
-    load_circuit_input("../test_files/goto.json")
+    # load_circuit_input("../test_files/goto.json")
+    draw(build_goto_circuit())
 
 
 if __name__ == "__main__":
