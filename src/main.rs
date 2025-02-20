@@ -1,9 +1,12 @@
 use tket2::{
     self,
-    hugr::{hugr::views::SiblingSubgraph, HugrView, Node},
+    hugr::{hugr::views::SiblingSubgraph, ops::NamedOp, HugrView, Node},
 };
 
-fn subgraph_from_source_node(circuit: tket2::Circuit, source_node: Node) -> SiblingSubgraph {
+fn subgraph_from_source_node(circuit: &tket2::Circuit, source_node: Node) -> SiblingSubgraph {
+    // Traverse the Circuit with BFS to find the subcircuit
+    // in the causal cone of the source node
+
     let mut visited_nodes: Vec<Node> = Vec::new();
     let mut nodes_to_visit = vec![source_node];
 
@@ -22,8 +25,18 @@ fn subgraph_from_source_node(circuit: tket2::Circuit, source_node: Node) -> Sibl
 }
 
 fn main() {
-    let circ: tket2::Circuit =
-        tket2::serialize::load_tk1_json_file("./test_files/goto.json").unwrap();
-    //let extarcted =  subgraph_from_source_node(circ, start_node);
-    //let subcircuit = Circuit::try_new(extracted, extracted.root())
+    let circ: tket2::Circuit = tket2::serialize::load_tk1_json_file("./test_files/z.json").unwrap();
+
+    println!("{}", circ.mermaid_string());
+
+    let pauli_z_cmds: Vec<_> = circ
+        .commands()
+        .filter(|cmd| cmd.optype().name() == "tket2.quantum.Z")
+        .collect();
+
+    let first_pauli = &pauli_z_cmds[0];
+
+    let extracted = subgraph_from_source_node(&circ, first_pauli.node());
+    //let subcircuit = tket2::Circuit::try_new(extracted, extracted.root()).unwrap();
+    println!("{:?}", extracted);
 }
