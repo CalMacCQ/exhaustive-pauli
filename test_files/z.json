@@ -1,1 +1,45 @@
-{"bits": [], "commands": [{"args": [["q", [0]]], "op": {"type": "Z"}}], "created_qubits": [], "discarded_qubits": [], "implicit_permutation": [[["q", [0]], ["q", [0]]]], "phase": "0.0", "qubits": [["q", [0]]]}
+{
+    "bits": [],
+    "commands": [
+        {
+            "args": [
+                [
+                    "q",
+                    [
+                        0
+                    ]
+                ]
+            ],
+            "op": {
+                "type": "Z"
+            }
+        }
+    ],
+    "created_qubits": [],
+    "discarded_qubits": [],
+    "implicit_permutation": [
+        [
+            [
+                "q",
+                [
+                    0
+                ]
+            ],
+            [
+                "q",
+                [
+                    0
+                ]
+            ]
+        ]
+    ],
+    "phase": "0.0",
+    "qubits": [
+        [
+            "q",
+            [
+                0
+            ]
+        ]
+    ]
+}
