@@ -1,0 +1,721 @@
+Circuit { hugr: Hugr { graph: MultiPortGraph { graph: PortGraph { nodes: {NodeIndex(0): Node { inputs: [], outputs: [PortIndex(0)
+                        ]
+                    }, NodeIndex(1): Node { inputs: [], outputs: PortIndex(1)..PortIndex(10)
+                    }, NodeIndex(2): Node { inputs: [PortIndex(10)
+                        ], outputs: []
+                    }, NodeIndex(3): Node { inputs: PortIndex(11)..PortIndex(20), outputs: []
+                    }, NodeIndex(4): Node { inputs: PortIndex(20)..PortIndex(22), outputs: PortIndex(22)..PortIndex(24)
+                    }, NodeIndex(5): Node { inputs: PortIndex(24)..PortIndex(27), outputs: PortIndex(27)..PortIndex(30)
+                    }, NodeIndex(6): Node { inputs: PortIndex(30)..PortIndex(33), outputs: PortIndex(33)..PortIndex(36)
+                    }, NodeIndex(7): Node { inputs: PortIndex(36)..PortIndex(39), outputs: PortIndex(39)..PortIndex(42)
+                    }, NodeIndex(8): Node { inputs: PortIndex(42)..PortIndex(45), outputs: PortIndex(45)..PortIndex(48)
+                    }, NodeIndex(9): Node { inputs: PortIndex(48)..PortIndex(51), outputs: PortIndex(51)..PortIndex(54)
+                    }
+                }, ports: {PortIndex(0): Port { node: NodeIndex(0), direction: Outgoing
+                    }, PortIndex(1): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(20)
+                    }, PortIndex(2): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(24)
+                    }, PortIndex(3): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(31)
+                    }, PortIndex(4): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(36)
+                    }, PortIndex(5): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(11)
+                    }, PortIndex(6): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(13)
+                    }, PortIndex(7): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(14)
+                    }, PortIndex(8): Port { node: NodeIndex(1), direction: Outgoing, link: PortIndex(43)
+                    }, PortIndex(9): Port { node: NodeIndex(1), direction: Outgoing
+                    }, PortIndex(10): Port { node: NodeIndex(2), direction: Incoming
+                    }, PortIndex(11): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(5)
+                    }, PortIndex(12): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(33)
+                    }, PortIndex(13): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(6)
+                    }, PortIndex(14): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(7)
+                    }, PortIndex(15): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(40)
+                    }, PortIndex(16): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(45)
+                    }, PortIndex(17): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(51)
+                    }, PortIndex(18): Port { node: NodeIndex(3), direction: Incoming, link: PortIndex(52)
+                    }, PortIndex(19): Port { node: NodeIndex(3), direction: Incoming
+                    }, PortIndex(20): Port { node: NodeIndex(4), direction: Incoming, link: PortIndex(1)
+                    }, PortIndex(21): Port { node: NodeIndex(4), direction: Incoming
+                    }, PortIndex(22): Port { node: NodeIndex(4), direction: Outgoing, link: PortIndex(25)
+                    }, PortIndex(23): Port { node: NodeIndex(4), direction: Outgoing
+                    }, PortIndex(24): Port { node: NodeIndex(5), direction: Incoming, link: PortIndex(2)
+                    }, PortIndex(25): Port { node: NodeIndex(5), direction: Incoming, link: PortIndex(22)
+                    }, PortIndex(26): Port { node: NodeIndex(5), direction: Incoming
+                    }, PortIndex(27): Port { node: NodeIndex(5), direction: Outgoing, link: PortIndex(30)
+                    }, PortIndex(28): Port { node: NodeIndex(5), direction: Outgoing, link: PortIndex(37)
+                    }, PortIndex(29): Port { node: NodeIndex(5), direction: Outgoing
+                    }, PortIndex(30): Port { node: NodeIndex(6), direction: Incoming, link: PortIndex(27)
+                    }, PortIndex(31): Port { node: NodeIndex(6), direction: Incoming, link: PortIndex(3)
+                    }, PortIndex(32): Port { node: NodeIndex(6), direction: Incoming
+                    }, PortIndex(33): Port { node: NodeIndex(6), direction: Outgoing, link: PortIndex(12)
+                    }, PortIndex(34): Port { node: NodeIndex(6), direction: Outgoing, link: PortIndex(42)
+                    }, PortIndex(35): Port { node: NodeIndex(6), direction: Outgoing
+                    }, PortIndex(36): Port { node: NodeIndex(7), direction: Incoming, link: PortIndex(4)
+                    }, PortIndex(37): Port { node: NodeIndex(7), direction: Incoming, link: PortIndex(28)
+                    }, PortIndex(38): Port { node: NodeIndex(7), direction: Incoming
+                    }, PortIndex(39): Port { node: NodeIndex(7), direction: Outgoing, link: PortIndex(48)
+                    }, PortIndex(40): Port { node: NodeIndex(7), direction: Outgoing, link: PortIndex(15)
+                    }, PortIndex(41): Port { node: NodeIndex(7), direction: Outgoing
+                    }, PortIndex(42): Port { node: NodeIndex(8), direction: Incoming, link: PortIndex(34)
+                    }, PortIndex(43): Port { node: NodeIndex(8), direction: Incoming, link: PortIndex(8)
+                    }, PortIndex(44): Port { node: NodeIndex(8), direction: Incoming
+                    }, PortIndex(45): Port { node: NodeIndex(8), direction: Outgoing, link: PortIndex(16)
+                    }, PortIndex(46): Port { node: NodeIndex(8), direction: Outgoing, link: PortIndex(49)
+                    }, PortIndex(47): Port { node: NodeIndex(8), direction: Outgoing
+                    }, PortIndex(48): Port { node: NodeIndex(9), direction: Incoming, link: PortIndex(39)
+                    }, PortIndex(49): Port { node: NodeIndex(9), direction: Incoming, link: PortIndex(46)
+                    }, PortIndex(50): Port { node: NodeIndex(9), direction: Incoming
+                    }, PortIndex(51): Port { node: NodeIndex(9), direction: Outgoing, link: PortIndex(17)
+                    }, PortIndex(52): Port { node: NodeIndex(9), direction: Outgoing, link: PortIndex(18)
+                    }, PortIndex(53): Port { node: NodeIndex(9), direction: Outgoing
+                    }
+                }
+            }, multiport: BitVec<usize, bitvec: :order: :Lsb0> { addr: 0x14db041e0, head: 000000, bits: 0, capacity: 256
+            } [], copy_node: BitVec<usize, bitvec: :order: :Lsb0> { addr: 0x14db04140, head: 000000, bits: 0, capacity: 256
+            } [], copy_node_count: 0, subport_count: 0
+        }, hierarchy: Hierarchy { data: UnmanagedDenseMap { data: [NodeData { children: Some([NodeIndex(1), NodeIndex(7)
+                        ]), children_count: 9, parent: None, siblings: [None, None
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [None, Some(NodeIndex(2))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(1)), Some(NodeIndex(5))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(6)), Some(NodeIndex(8))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(8)), Some(NodeIndex(7))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(2)), Some(NodeIndex(9))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(9)), Some(NodeIndex(3))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(4)), None
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(3)), Some(NodeIndex(4))
+                        ]
+                    }, NodeData { children: None, children_count: 0, parent: Some(NodeIndex(0)), siblings: [Some(NodeIndex(5)), Some(NodeIndex(6))
+                        ]
+                    }
+                ], phantom: PhantomData<portgraph: :NodeIndex>, default: NodeData { children: None, children_count: 0, parent: None, siblings: [None, None
+                    ]
+                }
+            }
+        }, root: NodeIndex(0), op_types: UnmanagedDenseMap { data: [FuncDefn(FuncDefn { name: "my_HUGR_subgraph", signature: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                    }), Any)
+                                ]
+                            }, output: TypeRowBase { types: []
+                            }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                            })
+                        }
+                    }
+                }), Input(Input { types: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any)
+                        ]
+                    }
+                }), Output(Output { types: TypeRowBase { types: []
+                    }
+                }), Output(Output { types: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                            }), Any)
+                        ]
+                    }
+                }), ExtensionOp(ExtensionOp { def: OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Z", description: "Z", misc: {
+                            "commutation": Array [Array [Number(0), String("Z")
+                                ]
+                            ]
+                        }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, runtime_reqs: ExtensionSet({})
+                            }
+                        }, lower_funcs: [], constant_folder: None
+                    }, args: [], signature: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                        })
+                    }
+                }), ExtensionOp(ExtensionOp { def: OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CX", description: "CX", misc: {
+                            "commutation": Array [Array [Number(0), String("Z")
+                                ], Array [Number(1), String("X")
+                                ]
+                            ]
+                        }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, runtime_reqs: ExtensionSet({})
+                            }
+                        }, lower_funcs: [], constant_folder: None
+                    }, args: [], signature: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                        })
+                    }
+                }), ExtensionOp(ExtensionOp { def: OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CX", description: "CX", misc: {
+                            "commutation": Array [Array [Number(0), String("Z")
+                                ], Array [Number(1), String("X")
+                                ]
+                            ]
+                        }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, runtime_reqs: ExtensionSet({})
+                            }
+                        }, lower_funcs: [], constant_folder: None
+                    }, args: [], signature: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                        })
+                    }
+                }), ExtensionOp(ExtensionOp { def: OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CX", description: "CX", misc: {
+                            "commutation": Array [Array [Number(0), String("Z")
+                                ], Array [Number(1), String("X")
+                                ]
+                            ]
+                        }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, runtime_reqs: ExtensionSet({})
+                            }
+                        }, lower_funcs: [], constant_folder: None
+                    }, args: [], signature: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                        })
+                    }
+                }), ExtensionOp(ExtensionOp { def: OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CX", description: "CX", misc: {
+                            "commutation": Array [Array [Number(0), String("Z")
+                                ], Array [Number(1), String("X")
+                                ]
+                            ]
+                        }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, runtime_reqs: ExtensionSet({})
+                            }
+                        }, lower_funcs: [], constant_folder: None
+                    }, args: [], signature: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                        })
+                    }
+                }), ExtensionOp(ExtensionOp { def: OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CX", description: "CX", misc: {
+                            "commutation": Array [Array [Number(0), String("Z")
+                                ], Array [Number(1), String("X")
+                                ]
+                            ]
+                        }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                        }), Any)
+                                    ]
+                                }, runtime_reqs: ExtensionSet({})
+                            }
+                        }, lower_funcs: [], constant_folder: None
+                    }, args: [], signature: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                }), Any)
+                            ]
+                        }, runtime_reqs: ExtensionSet({IdentList("tket2.quantum")
+                        })
+                    }
+                })
+            ], phantom: PhantomData<portgraph: :NodeIndex>, default: Module(Module)
+        }, metadata: UnmanagedDenseMap { data: [None, None, None, None, None, None, None, None, None, None
+            ], phantom: PhantomData<portgraph: :NodeIndex>, default: None
+        }, extensions: ExtensionRegistry { exts: {IdentList("prelude"): Extension { version: Version { major: 0, minor: 1, patch: 0
+                    }, name: IdentList("prelude"), runtime_reqs: ExtensionSet({}), types: {
+                        "error": TypeDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "error", params: [], description: "Simple opaque error type.", bound: Explicit { bound: Copyable
+                            }
+                        },
+                        "qubit": TypeDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "qubit", params: [], description: "qubit", bound: Explicit { bound: Any
+                            }
+                        },
+                        "string": TypeDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "string", params: [], description: "string", bound: Explicit { bound: Copyable
+                            }
+                        },
+                        "usize": TypeDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "usize", params: [], description: "usize", bound: Explicit { bound: Copyable
+                            }
+                        }
+                    }, values: {}, operations: {
+                        "Lift": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "Lift", description: "Add extension requirements to a row of values", misc: {}, signature_func: PolyFuncTypeBase { params: [Extensions, List { param: Type { b: Any
+                                        }
+                                    }
+                                ], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(RowVar(RowVariable(1, Any)), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(RowVar(RowVariable(1, Any)), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({IdentList("0")
+                                    })
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "MakeTuple": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "MakeTuple", description: "MakeTuple operation", misc: {}, signature_func: PolyFuncTypeBase { params: [List { param: Type { b: Any
+                                        }
+                                    }
+                                ], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(RowVar(RowVariable(0, Any)), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Sum(General { rows: [TypeRowBase { types: [TypeBase(RowVar(RowVariable(0, Any)), Any)
+                                                        ]
+                                                    }
+                                                ]
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: Some(<custom constant folding>)
+                        },
+                        "Noop": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "Noop", description: "Noop gate", misc: {}, signature_func: PolyFuncTypeBase { params: [Type { b: Any
+                                    }
+                                ], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Variable(0, Any), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Variable(0, Any), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: Some(<custom constant folding>)
+                        },
+                        "UnpackTuple": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "UnpackTuple", description: "UnpackTuple operation", misc: {}, signature_func: PolyFuncTypeBase { params: [List { param: Type { b: Any
+                                        }
+                                    }
+                                ], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Sum(General { rows: [TypeRowBase { types: [TypeBase(RowVar(RowVariable(0, Any)), Any)
+                                                        ]
+                                                    }
+                                                ]
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(RowVar(RowVariable(0, Any)), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: Some(<custom constant folding>)
+                        },
+                        "load_nat": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "load_nat", description: "Loads a generic bounded nat parameter into a usize runtime value.", misc: {}, signature_func: PolyFuncTypeBase { params: [BoundedNat { bound: UpperBound(None)
+                                    }
+                                ], body: FuncTypeBase { input: TypeRowBase { types: []
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "usize", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: Some(<custom constant folding>)
+                        },
+                        "panic": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "panic", description: "Panic with input error", misc: {}, signature_func: PolyFuncTypeBase { params: [List { param: Type { b: Any
+                                        }
+                                    }, List { param: Type { b: Any
+                                        }
+                                    }
+                                ], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "error", args: [], bound: Copyable
+                                            }), Copyable), TypeBase(RowVar(RowVariable(0, Any)), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(RowVar(RowVariable(1, Any)), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "print": OpDef { extension: IdentList("prelude"), extension_ref: (Weak), name: "print", description: "Print the string to standard output", misc: {}, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "string", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, output: TypeRowBase { types: []
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        }
+                    }
+                }, IdentList("tket2.quantum"): Extension { version: Version { major: 0, minor: 1, patch: 1
+                    }, name: IdentList("tket2.quantum"), runtime_reqs: ExtensionSet({}), types: {}, values: {}, operations: {
+                        "CRz": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CRz", description: "CRz", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("tket2.rotation"), extension_ref: (Weak), id: "rotation", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "CX": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CX", description: "CX", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ], Array [Number(1), String("X")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "CY": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CY", description: "CY", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "CZ": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "CZ", description: "CZ", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ], Array [Number(1), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "H": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "H", description: "H", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Measure": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Measure", description: "Measure", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Sum(Unit { size: 2
+                                            }), Copyable)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "MeasureFree": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "MeasureFree", description: "MeasureFree", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Sum(Unit { size: 2
+                                            }), Copyable)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "QAlloc": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "QAlloc", description: "QAlloc", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: []
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "QFree": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "QFree", description: "QFree", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: []
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Reset": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Reset", description: "Reset", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Rx": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Rx", description: "Rx", misc: {
+                                "commutation": Array [Array [Number(0), String("X")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("tket2.rotation"), extension_ref: (Weak), id: "rotation", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Ry": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Ry", description: "Ry", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("tket2.rotation"), extension_ref: (Weak), id: "rotation", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Rz": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Rz", description: "Rz", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("tket2.rotation"), extension_ref: (Weak), id: "rotation", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "S": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "S", description: "S", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Sdg": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Sdg", description: "Sdg", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "T": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "T", description: "T", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Tdg": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Tdg", description: "Tdg", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Toffoli": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Toffoli", description: "Toffoli", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any), TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "TryQAlloc": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "TryQAlloc", description: "TryQAlloc", misc: {
+                                "commutation": Array []
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: []
+                                    }, output: TypeRowBase { types: [TypeBase(Sum(General { rows: [TypeRowBase { types: []
+                                                    }, TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                                            }), Any)
+                                                        ]
+                                                    }
+                                                ]
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "X": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "X", description: "X", misc: {
+                                "commutation": Array [Array [Number(0), String("X")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Y": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Y", description: "Y", misc: {
+                                "commutation": Array [Array [Number(0), String("Y")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "Z": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "Z", description: "Z", misc: {
+                                "commutation": Array [Array [Number(0), String("Z")
+                                    ]
+                                ]
+                            }, signature_func: PolyFuncTypeBase { params: [], body: FuncTypeBase { input: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("prelude"), extension_ref: (Weak), id: "qubit", args: [], bound: Any
+                                            }), Any)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        },
+                        "symbolic_angle": OpDef { extension: IdentList("tket2.quantum"), extension_ref: (Weak), name: "symbolic_angle", description: "Store a sympy expression that can be evaluated to an angle.", misc: {}, signature_func: PolyFuncTypeBase { params: [String
+                                ], body: FuncTypeBase { input: TypeRowBase { types: []
+                                    }, output: TypeRowBase { types: [TypeBase(Extension(CustomType { extension: IdentList("tket2.rotation"), extension_ref: (Weak), id: "rotation", args: [], bound: Copyable
+                                            }), Copyable)
+                                        ]
+                                    }, runtime_reqs: ExtensionSet({})
+                                }
+                            }, lower_funcs: [], constant_folder: None
+                        }
+                    }
+                }
+            }, valid: false
+        }
+    }, parent: Node(0)
+}
