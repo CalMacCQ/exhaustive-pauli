@@ -26,25 +26,22 @@ def build_goto_circuit() -> Circuit:
     return goto
 
 
-def generate_circuit_json(circ: Circuit) -> None:
-    with open("./test_files/goto.json", "w") as fp:
+def generate_circuit_json(circ: Circuit, file_path: str) -> None:
+    with open(file_path, "w") as fp:
         json.dump(circ.to_dict(), fp)
 
 
 def load_circuit_input(file_path: str) -> None:
     with open(file_path, "r") as fp:
         circ_json = json.load(fp)
-
-    c = Circuit.from_dict(circ_json)
-    # circ = Tk2Circuit.from_package_json(circ_json)
-    # circ = lower_to_pytket(circ)
-    # print(circ.to_tket1().get_commands())
-    print(c.get_commands())
+    circ = Tk2Circuit.from_package_json(circ_json)
+    circ = lower_to_pytket(circ)
+    print(circ.to_tket1().get_commands())
 
 
 def main():
-    # load_circuit_input("../test_files/goto.json")
-    draw(build_goto_circuit())
+    load_circuit_input("../test_files/tket2_json/test.json")
+    # draw(build_goto_circuit())
 
 
 if __name__ == "__main__":
