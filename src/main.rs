@@ -12,7 +12,8 @@ fn subgraph_from_source_node(circuit: &tket2::Circuit, source_node: Node) -> Sib
     let mut visited_nodes: Vec<Node> = Vec::new();
     let mut nodes_to_visit = vec![source_node];
 
-    visited_nodes.push(source_node);
+    // Normally in BFS we would add the source node to visited_nodes
+    // However we only want the gates that come after the Pauli gate
 
     while nodes_to_visit.len() > 0 {
         let current_node = nodes_to_visit.pop().unwrap();
@@ -44,7 +45,7 @@ fn main() {
     let extracted = sibgraph.extract_subgraph(circ.hugr(), "");
 
     let subcircuit = tket2::Circuit::try_new(&extracted, extracted.root()).unwrap();
-    println!("{:?}", subcircuit.mermaid_string());
+    println!("{}", subcircuit.mermaid_string());
 
     let file = File::create("test_files/tket2_json/subcircuit.json").unwrap();
 
