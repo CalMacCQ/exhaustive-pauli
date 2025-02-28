@@ -47,8 +47,8 @@ def load_tket1_circuit_input(file_path: str) -> Circuit:
 
 
 def main():
-    # load_circuit_input("../test_files/tket2_json/subcircuit.json")
-    draw(build_goto_circuit())
+    circ = load_tket1_circuit_input("../test_files/tket2_json/subcircuit.json")
+    draw(circ)
 
 
 if __name__ == "__main__":
