@@ -30,7 +30,7 @@ fn subgraph_from_source_node(circuit: &tket2::Circuit, source_node: Node) -> Sib
 
 fn main() {
     let circ: tket2::Circuit =
-        tket2::serialize::load_tk1_json_file("./test_files/tket1_json/goto.json").unwrap();
+        tket2::serialize::load_tk1_json_file("./test_files/input_circuits/goto.json").unwrap();
 
     println!("{}", circ.mermaid_string());
 
@@ -48,7 +48,7 @@ fn main() {
     let subcircuit = tket2::Circuit::try_new(extracted.clone(), extracted.root()).unwrap();
     println!("{}", subcircuit.mermaid_string());
 
-    let file = File::create("test_files/tket2_json/subcircuit.json").unwrap();
+    let file = File::create("test_files/output_circuits/subcircuit.json").unwrap();
 
     let _ = save_tk1_json_writer(&subcircuit, file);
 }
