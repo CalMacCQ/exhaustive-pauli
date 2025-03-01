@@ -49,7 +49,7 @@ def load_tket1_circuit_input(file_path: str) -> Circuit:
 
 
 def main():
-    circ = load_tket1_circuit_input("../test_files/tket2_json/subcircuit.json")
+    circ = load_tket1_circuit_input("../test_files/output_circuits/subcircuit.json")
     pauli_z_error = tensor_from_pauli_index(Pauli.Z, index=2, n_qubits=8)
     slice_tableau = UnitaryTableau(circ)
     terminal_error = slice_tableau.get_row_product(pauli_z_error)
