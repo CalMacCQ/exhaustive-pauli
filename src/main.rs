@@ -1,6 +1,7 @@
 use tket2::{
     self,
     hugr::{hugr::views::SiblingSubgraph, ops::NamedOp, HugrView, Node},
+    serialize::save_tk1_json_writer,
 };
 
 use std::fs::File;
@@ -44,10 +45,10 @@ fn main() {
 
     let extracted = sibgraph.extract_subgraph(circ.hugr(), "");
 
-    let subcircuit = tket2::Circuit::try_new(&extracted, extracted.root()).unwrap();
+    let subcircuit = tket2::Circuit::try_new(extracted.clone(), extracted.root()).unwrap();
     println!("{}", subcircuit.mermaid_string());
 
     let file = File::create("test_files/tket2_json/subcircuit.json").unwrap();
 
-    let _ = subcircuit.to_package_writer(file);
+    let _ = save_tk1_json_writer(&subcircuit, file);
 }

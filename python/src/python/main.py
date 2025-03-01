@@ -1,5 +1,7 @@
 import json
-from pytket import Circuit
+from pytket import Circuit, Qubit
+from pytket.pauli import Pauli, QubitPauliTensor
+from pytket.tableau import UnitaryTableau
 from pytket.circuit.display import view_browser as draw
 
 from tket2.circuit import Tk2Circuit
@@ -26,6 +28,18 @@ def build_goto_circuit() -> Circuit:
     return goto
 
 
+def tensor_from_pauli_index(
+    pauli: Pauli, index: int, n_qubits: int
+) -> QubitPauliTensor:
+    pauli_list = [Pauli.I] * n_qubits
+
+    pauli_list[index] = pauli
+
+    qubit_list = [Qubit(n) for n in range(n_qubits)]
+
+    return QubitPauliTensor(paulis=pauli_list, qubits=qubit_list)
+
+
 def generate_circuit_json(circ: Circuit, file_path: str) -> None:
     with open(file_path, "w") as fp:
         json.dump(circ.to_dict(), fp)
@@ -47,8 +61,11 @@ def load_tket1_circuit_input(file_path: str) -> Circuit:
 
 
 def main():
-    # load_circuit_input("../test_files/tket2_json/subcircuit.json")
-    draw(build_goto_circuit())
+    circ = load_tket1_circuit_input("../test_files/tket2_json/subcircuit.json")
+    pauli_z_error = tensor_from_pauli_index(Pauli.Z, index=2, n_qubits=8)
+    slice_tableau = UnitaryTableau(circ)
+    terminal_error = slice_tableau.get_row_product(pauli_z_error)
+    print(terminal_error)
 
 
 if __name__ == "__main__":
