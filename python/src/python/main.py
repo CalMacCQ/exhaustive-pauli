@@ -2,10 +2,6 @@ import json
 from pytket import Circuit, Qubit
 from pytket.pauli import Pauli, QubitPauliTensor
 from pytket.tableau import UnitaryTableau
-from pytket.circuit.display import view_browser as draw
-
-from tket2.circuit import Tk2Circuit
-from tket2.passes import lower_to_pytket
 
 
 def build_goto_circuit() -> Circuit:
@@ -43,14 +39,6 @@ def tensor_from_pauli_index(
 def generate_circuit_json(circ: Circuit, file_path: str) -> None:
     with open(file_path, "w") as fp:
         json.dump(circ.to_dict(), fp)
-
-
-def load_tket2_circuit_input(file_path: str) -> None:
-    with open(file_path, "r") as fp:
-        circ_json = json.load(fp)
-    circ = Tk2Circuit.from_package_json(str(circ_json))
-    circ = lower_to_pytket(circ)
-    print(circ.to_tket1().get_commands())
 
 
 def load_tket1_circuit_input(file_path: str) -> Circuit:
