@@ -98,7 +98,7 @@ def _get_phase_gadget_circuit(pauli_tensors: list[QubitPauliTensor]) -> Circuit:
         pauli_list = list(tensor.string.map.values())
         pair: tuple[list[Pauli], float] = (pauli_list, tensor.coeff.real)
         pauli_ops.append(pair)
-
+    print(pauli_ops)
     pauli_gadgets_sequence = PauliExpCommutingSetBox(pauli_ops)
     n_qubits = pauli_gadgets_sequence.n_qubits
 
@@ -135,3 +135,6 @@ def synthesise_clifford(pbox: PhasePolyBox, input_pauli: QubitPauliTensor) -> Ci
     # Combine circuits for P' and Q
     pauli_circ.append(operator_circ)
     return pauli_circ
+
+
+cnot_t_circ = Circuit(3).CX(0, 1).CX(0, 2).CX(2, 1).CX(1, 0).Z(1).T(2).CX(0, 2).CX(0, 1)
